@@ -2,5 +2,6 @@
   <h1><%= @category.name %></h1>
 
   <p><%= link_to 'Return to categories', categories_path %></p>
-  <p><%= link_to 'Edit category', edit_category_path %></p>
+  <p><%= link_to 'Edit category', edit_category_path(@category) %></p>
+  <p><%= link_to 'Delete category', category_path(@category), :data => {:confirm => 'You sure?', :method => 'delete'} %></p>
 </div>
